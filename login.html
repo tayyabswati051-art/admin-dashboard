@@ -66,6 +66,26 @@
 </div>
 </div>
 <script src="auth.js"></script>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Page ko automatic refresh hone se rokein
 
+    // 1. User jo input fields mein likhega, yeh unhe pakdega
+    const emailInput = document.querySelector('input[type="email"]').value;
+    const passwordInput = document.querySelector('input[type="password"]').value;
+
+    // 2. YAHAN AAP APNA DUMMY EMAIL AUR PASSWORD BADAL SAKTE HAIN
+    const sahiEmail = "admin@gmail.com";
+    const sahiPassword = "admin123";
+
+    // 3. Ab dono ko match karte hain
+    if (emailInput === sahiEmail && passwordInput === sahiPassword) {
+        alert("Login Successful! Welcome to ShopHub Dashboard.");
+        window.location.href = "index.html"; // Sahi hone par dashboard par bhej do
+    } else {
+        alert("Galat Details! Sahi credentials yeh hain:\nEmail: admin@gmail.com\nPassword: admin123");
+    }
+});
+</script>
 </body>
 </html>
