@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Users Table</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .status-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .status-valid { background-color: green; }
+    .status-invalid { background-color: red; }
+  </style>
+</head>
+<body>  
+
+
+    <div class="d-flex">
+        <aside class="sidebar  ">
+            <img src="Dark.png" alt="" class="logo" class="img-fluid">
+            <div class="side-nav  d-flex justify-content-between flex-column h-100 mt-5">
+                <ul class="nav flex-column ">
+                    <li class="nav-item "><a class="nav-link active gap-10 gap-2 d-flex align-items-center" href="#"> <i
+                                class="bi bi-speedometer2"></i> Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link  gap-10 gap-2 d-flex align-items-center" href="#"><i
+                                class="bi bi-people"></i>USERS</a></li>
+                    <li class="nav-item"><a class="nav-link  gap-10 gap-2 d-flex align-items-center" href="#"><i
+                                class="bi bi-bag-check"></i>order</a></li>
+                    <li class="nav-item"><a class="nav-link  gap-10 gap-2 d-flex align-items-center" href="#"> <i
+                                class="bi bi-graph-up"></i>Sales Report</a></li>
+                    <li class="nav-item"><a class="nav-link  gap-10 gap-2 d-flex align-items-center" href="#"> <i
+                                class="bi bi-box-seam"></i>Products</a></li>
+                </ul>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link  gap-10 gap-2 d-flex align-items-center" href="#"> <i
+                                class="bi bi-envelope"></i>Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link  gap-10 gap-2 d-flex align-items-center" href="#"><i
+                                class="bi bi-question-circle"></i>Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link  gap-10 gap-2 d-flex align-items-center text-danger" href="signup.html"><i
+                                class="bi bi-box-arrow-right text-danger"></i>Sign Out</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="nav-bar d-flex justify-content-end">
+            <div class="row">
+                <div class="col-lg-4">
+
+                </div>
+            </div>
+        </div>
+        <main class="content p-4">
+            <nav class="navbar navbar-expand-lg bg-white border-bottom px-4 mb-5">
+                <div class="container p-0">
+
+                    <div class="d-flex align-items-center ms-auto gap-4">
+
+                        <!-- Search Icon -->
+                        <i class="bi bi-search fs-5 cursor-pointer"></i>
+
+                        <!-- Bell Icon -->
+                        <div class="position-relative">
+                            <i class="bi bi-bell fs-5 cursor-pointer"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                            </span>
+                        </div>
+
+
+                        <div class="dropdown">
+                            <a class="d-flex align-items-center gap-2 text-decoration-none dropdown-toggle" href="#"
+                                role="button" data-bs-toggle="dropdown">
+
+                                <img src="https://i.pravatar.cc/40" class="rounded-circle" width="36" height="36"
+                                    alt="User">
+
+                                <span class="fw-semibold">John Doe</span>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end shadow">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="login.html"><i
+                                            class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+
+            <!-- <h1>Main Content</h1>
+            <p class="main-para">Here is the information about all your orders</p> -->
+
+            <div class="container mt-5">
+
+
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h5 class="fw-bold">Data Table</h5>
+    <button class="btn btn-primary">
+      <i class="fa fa-plus me-1"></i> Add Product
+    </button>
+  </div>
+
+  <!-- Search -->
+  <div class="mb-3"> 
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+
+  <!-- Table -->
+  <div class="table-responsive">
+    <table class="table table-bordered align-middle">
+      <thead>
+        <tr>
+          <th width="40"><input type="checkbox" class="row-checkbox"></th>
+          <th>Name</th>
+          <th>HS Code</th>
+          <th>HS Description</th>
+          <th>Status</th>
+          <th width="120">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>Underly Stroud</td>
+          <td>8432.100</td>
+          <td>FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUATIC</td>
+          <td class="status-active">ACTIVE</td>
+          <td class="action-btn">
+            <i class="fa fa-pen"></i>
+            <i class="fa fa-trash"></i>
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>Storth smith</td>
+          <td>8432.100</td>
+          <td>FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUATIC</td>
+          <td class="status-active">ACTIVE</td>
+          <td class="action-btn">
+            <i class="fa fa-pen"></i>
+            <i class="fa fa-trash"></i>
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>Michael Byron</td>
+          <td>8432.100</td>
+          <td>FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUATIC</td>
+          <td class="status-active">ACTIVE</td>
+          <td class="action-btn">
+            <i class="fa fa-pen"></i>
+            <i class="fa fa-trash"></i>
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox"></td>
+          <td>Mary Jane</td>
+          <td>8432.100</td>
+          <td>FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUATIC</td>
+          <td class="status-invalid">IN ACTIVE</td>
+          <td class="action-btn">
+            <i class="fa fa-pen"></i>
+            <i class="fa fa-trash"></i>
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox" ></td>
+          <td>Peter circle</td>
+          <td>8432.100</td>
+          <td>FISH AND CRUSTACEANS, MOLLUSCS AND OTHER AQUATIC</td>
+          <td class="status-active">ACTIVE</td>
+          <td class="action-btn">
+            <i class="fa fa-pen"></i>
+            <i class="fa fa-trash"></i>
+          </td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+  <button class="btn btn-primary" id="deleteSelected">Delete Selected</button>
+</div>
+
+        </main>
+<script>
+  const selectAll = document.getElementById("selectAll");
+  const checkboxes = document.querySelectorAll(".row-checkbox");
+
+  // Select/deselect all rows
+  selectAll.addEventListener("change", () => {
+    checkboxes.forEach(cb => cb.checked = selectAll.checked);
+  });
+
+  // Delete individual row
+  document.querySelectorAll(".delete-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.target.closest("tr").remove();
+    });
+  });
+
+  // Delete selected rows
+  document.getElementById("deleteSelected").addEventListener("click", () => {
+    checkboxes.forEach(cb => {
+      if(cb.checked) cb.closest("tr").remove();
+    });
+  });
+
+  // Edit button demo
+  document.querySelectorAll(".edit-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const row = e.target.closest("tr");
+      const name = row.children[1].textContent;
+      const email = row.children[2].textContent;
+      alert(`Edit user:\nName: ${name}\nEmail: ${email}`);
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
