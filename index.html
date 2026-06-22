@@ -292,15 +292,15 @@
         </main>
     </div>
 
-
-    <script>
+script src="#"><script>
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault(); // Page ko refresh hone se rokein
     
-    // User jo bhi email/password dale, direct dashboard (items.html) par bhej do
-    window.location.href = "items.html"; 
+    // User jo bhi email/password dale, direct dashboard par bhej do
+    // Agar aapke main page ka naam index.html hai to "index.html" likhein
+    window.location.href = "index.html"; 
 });
-</script>
+</script></script>
     <script>
         new Chart(document.getElementById('pieChart'), {
             type: 'pie',
