@@ -294,6 +294,14 @@
 
 
     <script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Page ko refresh hone se rokein
+    
+    // User jo bhi email/password dale, direct dashboard (items.html) par bhej do
+    window.location.href = "items.html"; 
+});
+</script>
+    <script>
         new Chart(document.getElementById('pieChart'), {
             type: 'pie',
             data: {
